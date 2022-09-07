@@ -6,11 +6,11 @@ function User() {
 
   // for value inputs in the form
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     email: "",
     password: "",
-    passwordConfirmation: "",
+    password_confirmation: ""
   });
 
   // capture changes that happen to the inputs
@@ -24,19 +24,19 @@ function User() {
 
     // signup form data
     const signupFormData = {
-      firstName: formData.firstName,
-      lastName: formData.lastName,
+      first_name: formData.first_name,
+      last_name: formData.last_name,
       email: formData.email,
       password: formData.password,
-      passwordConfirmation: formData.passwordConfirmation,
+      password_confirmation: formData.password_confirmation
     };
 
     // Verify form data
 
-    if (formData.password !== formData.passwordConfirmation) {
+    if (signupFormData.password !== signupFormData.password_confirmation) {
       alert("Passwords do not match!");
     } else if (signupFormData.password.length < 8) {
-      alert("Password must be a minimum of 6 characters");
+      alert("Password must be a minimum of 8 characters");
     } else {
       // fetch users and send a post request for a new user
       fetch("http://localhost:9292/users", {
@@ -51,7 +51,7 @@ function User() {
           console.log(data);
           navigate("/login");
           alert(
-            `Welcome ${signupFormData.firstName} ${signupFormData.lastName}`
+            `Welcome ${signupFormData.first_name} ${signupFormData.last_name}`
           );
         })
         .catch((err) => console.log(err));
@@ -59,28 +59,31 @@ function User() {
   }
 
   return (
-    <div className="signup">
-      <form onSubmit={handleSubmit} className="signup-form">
-        <h2 id="h2">Create Account</h2>
+    <div className="border-solid mt-20 mx-auto p-4 h-96 w-80 border-2 rounded-md border-gray-300">
+      <form onSubmit={handleSubmit} className="">
+        <h2 className="text-2xl">Create Account</h2>
         <input
+          className="border-solid mt-2  p-1 h-9 w-78 border-2 rounded border-gray-300 text-1xl outline-none"
+          name="first_name"
           onChange={handleChange}
-          name="firstName"
           type="text"
-          value={formData.firstName}
+          value={formData.first_name}
           placeholder="First Name"
           required
         />
         <input
+          className="border-solid mt-2 mx-auto p-1 h-9 w-74 border-2 rounded border-gray-300 text-1xl outline-none"
+          name="last_name"
           onChange={handleChange}
-          name="lastName"
           type="text"
-          value={formData.lastName}
+          value={formData.last_name}
           placeholder="Last Name"
           required
         />
         <input
-          onChange={handleChange}
+          className="border-solid mt-2 mx-auto p-1 h-9 w-74 border-2 rounded border-gray-300 text-1xl outline-none"
           name="email"
+          onChange={handleChange}
           type="email"
           value={formData.email}
           placeholder="Email"
@@ -88,18 +91,20 @@ function User() {
         />
 
         <input
-          onChange={handleChange}
+          className="border-solid mt-2 mx-auto p-1 h-9 w-74 border-2 rounded border-gray-300 text-1xl outline-none"
           name="password"
+          onChange={handleChange}
           type="password"
           value={formData.password}
           placeholder="Password"
           required
         />
         <input
+          className="border-solid mt-2 mx-auto p-1 h-9 w-74 border-2 rounded border-gray-300 text-1xl outline-none"
+          name="password_confirmation"
           onChange={handleChange}
-          name="passwordConfirmation"
           type="password"
-          value={formData.confirmPassword}
+          value={formData.password_confirmation}
           placeholder="Confirm Password"
           required
         />
