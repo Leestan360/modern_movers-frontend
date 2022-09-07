@@ -35,7 +35,7 @@ function User() {
 
     if (formData.password !== formData.passwordConfirmation) {
       alert("Passwords do not match!");
-    } else if (signupFormData.password.length < 6) {
+    } else if (signupFormData.password.length < 8) {
       alert("Password must be a minimum of 6 characters");
     } else {
       // fetch users and send a post request for a new user
@@ -67,7 +67,7 @@ function User() {
           name="firstName"
           type="text"
           value={formData.firstName}
-          placeholder="FirstName"
+          placeholder="First Name"
           required
         />
         <input
@@ -75,7 +75,7 @@ function User() {
           name="lastName"
           type="text"
           value={formData.lastName}
-          placeholder="LastName"
+          placeholder="Last Name"
           required
         />
         <input
