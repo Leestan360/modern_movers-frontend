@@ -14,6 +14,11 @@ function User() {
     passwordConfirmation: "",
   });
 
+  // capture changes that happen to the inputs
+  function handleChange(e) {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
+
   return (
 
   )
