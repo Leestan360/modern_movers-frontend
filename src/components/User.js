@@ -59,11 +59,11 @@ function User() {
   }
 
   return (
-    <div className="border-solid mt-20 mx-auto p-4 h-96 w-80 border-2 rounded-md border-gray-300">
+    <div className="border-solid mt-20 mx-auto p-4 h-80 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center">
       <form onSubmit={handleSubmit} className="">
-        <h2 className="text-2xl">Create Account</h2>
+        <h2 className="text-2xl mx-auto text-center">Create Account</h2>
         <input
-          className="border-solid mt-2  p-1 h-9 w-78 border-2 rounded border-gray-300 text-1xl outline-none"
+          className="border-solid mt-2 mx-auto p-1 h-9 border-2 rounded-md border-gray-300 text-lg outline-none"
           name="first_name"
           onChange={handleChange}
           type="text"
@@ -72,7 +72,7 @@ function User() {
           required
         />
         <input
-          className="border-solid mt-2 mx-auto p-1 h-9 w-74 border-2 rounded border-gray-300 text-1xl outline-none"
+          className="border-solid mt-2 mx-auto p-1 h-9 border-2 rounded-md border-gray-300 text-lg outline-none"
           name="last_name"
           onChange={handleChange}
           type="text"
@@ -81,7 +81,7 @@ function User() {
           required
         />
         <input
-          className="border-solid mt-2 mx-auto p-1 h-9 w-74 border-2 rounded border-gray-300 text-1xl outline-none"
+          className="border-solid mt-2 mx-auto p-1 h-9 border-2 rounded-md border-gray-300 text-lg outline-none"
           name="email"
           onChange={handleChange}
           type="email"
@@ -91,7 +91,7 @@ function User() {
         />
 
         <input
-          className="border-solid mt-2 mx-auto p-1 h-9 w-74 border-2 rounded border-gray-300 text-1xl outline-none"
+          className="border-solid mt-2 mx-auto p-1 h-9 border-2 rounded-md border-gray-300 text-lg outline-none"
           name="password"
           onChange={handleChange}
           type="password"
@@ -100,7 +100,7 @@ function User() {
           required
         />
         <input
-          className="border-solid mt-2 mx-auto p-1 h-9 w-74 border-2 rounded border-gray-300 text-1xl outline-none"
+          className="border-solid mt-2 mx-auto p-1 h-9 border-2 rounded-md border-gray-300 text-lg outline-none"
           name="password_confirmation"
           onChange={handleChange}
           type="password"
@@ -108,8 +108,18 @@ function User() {
           placeholder="Confirm Password"
           required
         />
-        <button type="submit">Sign Up</button>
+        <button 
+          className="border-solid rounded-md items-center text-xl p-1 px-14 h-9 w-78 my-2 mx-auto bg-cyan-500"
+          type="submit">Sign Up</button>
       </form>
+      <p className="bg-gray-300 w-80 mt-4">
+        Have an account?        
+        {/* <Link
+          to="/login" */}
+        {/* > */}
+          Log In
+        {/* </Link> */}
+      </p>
     </div>
   );
 }
