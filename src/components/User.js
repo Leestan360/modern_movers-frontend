@@ -60,6 +60,8 @@ function User() {
 
   return (
     <div >
+
+      {/* Login form */}
       <form 
         className="border-solid mt-20 mx-auto p-4 h-80 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center"
         onSubmit={handleSubmit}>
