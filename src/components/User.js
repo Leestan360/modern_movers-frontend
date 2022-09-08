@@ -115,14 +115,14 @@ function User() {
           type="submit">Sign Up</button>
       </form>
       <p 
-      className="border-solid mt-3 text-xl mx-auto p-2 h-14 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center"
+      className="border-solid mt-3 text-xl mx-auto p-2 h-12 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center"
       >
         Have an account?        
         {/* <Link
           to="/login" */}
         {/* > */}
           <button
-          className="border-solid rounded-md items-center text-xl p-1 px-3 mx-2 mx-auto bg-cyan-500"
+          className="border-solid rounded-md items-center text-xl px-3 mx-2 mx-auto bg-cyan-500"
           >Login</button>
         {/* </Link> */}
       </p>
