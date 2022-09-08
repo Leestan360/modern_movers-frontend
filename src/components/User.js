@@ -10,7 +10,7 @@ function User() {
     last_name: "",
     email: "",
     password: "",
-    password_confirmation: ""
+    password_confirmation: "",
   });
 
   // capture changes that happen to the inputs
@@ -28,7 +28,7 @@ function User() {
       last_name: formData.last_name,
       email: formData.email,
       password: formData.password,
-      password_confirmation: formData.password_confirmation
+      password_confirmation: formData.password_confirmation,
     };
 
     // Verify form data
@@ -59,12 +59,12 @@ function User() {
   }
 
   return (
-    <div >
-
+    <div>
       {/* Login form */}
-      <form 
+      <form
         className="border-solid mt-20 mx-auto p-4 h-80 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center"
-        onSubmit={handleSubmit}>
+        onSubmit={handleSubmit}
+      >
         <h2 className="text-2xl mx-auto text-center">Create Account</h2>
         <input
           className="border-solid mt-2 mx-auto p-1 h-9 border-2 rounded-md border-gray-300 text-lg outline-none"
@@ -112,20 +112,21 @@ function User() {
           placeholder="Confirm Password"
           required
         />
-        <button 
+        <button
           className="border-solid rounded-md items-center text-xl p-1 px-14 h-9 w-78 my-2 mx-auto bg-cyan-500"
-          type="submit">Sign Up</button>
+          type="submit"
+        >
+          Sign Up
+        </button>
       </form>
-      <p 
-      className="border-solid mt-3 text-xl mx-auto p-2 h-12 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center"
-      >
-        Have an account?        
+      <p className="border-solid mt-3 text-xl mx-auto p-2 h-12 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center">
+        Have an account?
         {/* <Link
           to="/login" */}
         {/* > */}
-          <button
-          className="border-solid rounded-md items-center text-xl px-3 mx-2 mx-auto bg-cyan-500"
-          >Login</button>
+        <button className="border-solid rounded-md items-center text-xl px-3 mx-2 mx-auto bg-cyan-500">
+          Login
+        </button>
         {/* </Link> */}
       </p>
     </div>
