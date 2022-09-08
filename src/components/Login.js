@@ -53,7 +53,7 @@ function Login() {
   return (
     <div>
       <form 
-        className="border-solid mt-24 mx-auto p-4 h-50 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center"
+        className="border-solid mt-32 mx-auto p-4 h-50 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center"
         type="submit" onSubmit={handleSubmit}>
         <h2 className="text-2xl mx-auto text-center">Log in to account</h2>
         <input 
@@ -73,7 +73,7 @@ function Login() {
           onChange={handlePasswordChange}
         />
         <button 
-        className="border-solid rounded-md items-center text-xl p-1 px-14 h-9 w-78 my-2 mx-auto bg-cyan-500"
+        className="border-solid rounded-md items-center text-xl p-1 px-14 h-9 w-78 mt-4 mx-auto bg-cyan-500"
         type="submit">Log in</button>
       </form>
       <p 
