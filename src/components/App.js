@@ -1,9 +1,10 @@
+import Login from "./Login";
 import User from "./User";
 
 function App () {
   return (
     <>
-      <User />
+      <Login />
     </>
   )
 }
