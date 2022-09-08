@@ -6,11 +6,14 @@ function Login() {
 
   const navigate = useNavigate();
 
+  // Get and set users
   const [userData, setUserData] = useState([]);
 
+  // Set initial values of email and password
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // Fetch all users from db
   useEffect(() => {
     fetch("http://localhost:9292/users")
     .then((res) => res.json())
@@ -19,17 +22,21 @@ function Login() {
     })
   }, [])
 
+  // Handle input email change
   function handleEmailChange(e) {
     setEmail(e.target.value)
   }
 
+  // Handle input password change
   function handlePasswordChange(e) {
     setPassword(e.target.value)
   }
 
+  // Handle form submit
   function handleSubmit(e) {
     e.preventDefault();
 
+    // Filter users to find a specific user from the database
     userData.filter(user => {
       if (user.email === email && user.password === password) {
         alert(`Welcome ${user.first_name} ${user.last_name}`)
