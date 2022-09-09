@@ -6,7 +6,7 @@ function NavBar() {
 
   // client-side links to display on the url
   return (
-    <div className="flex justify-between text-2xl p-4 bg-emerald-300 ">
+    <div className="flex justify-between text-2xl p-4 bg-emerald-300 fixed w-screen top-0">
       <h2><NavLink  to="/">Modern Movers</NavLink></h2>
       <div>
         <NavLink
