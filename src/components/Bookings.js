@@ -16,7 +16,7 @@ function Bookings() {
   })
  
   return (
-    <div className="mt-24 ml-10 text-2xl h-96 p-3 flex">
+    <div className="mt-24 mx-auto text-2xl h-96 p-3 grid gap-4 grid-cols-3 grid-rows-3">
       {displayBookings}
     </div>
   )
