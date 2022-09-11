@@ -34,7 +34,7 @@ function NavBar() {
           Log in
         </NavLink>
         <NavLink
-        className="ml-2 bg-orange-400 hover:bg-orange-600 hover:text-white py-1 px-2 rounded-lg"
+        className="ml-2 mr-4 bg-orange-400 hover:bg-orange-600 hover:text-white py-1 px-2 rounded-lg"
           to="/signup" 
         >
           Sign Up
