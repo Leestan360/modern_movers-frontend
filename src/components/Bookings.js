@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SingleBooking from "./SingleBooking";
 
 function Bookings() {
 
@@ -10,13 +11,13 @@ function Bookings() {
     .then(data => setBookings(data))
   }, []);
 
-  const displaybookings = bookings.map((book, index) => {
-    return <SingleBook key={index} book={book} />
+  const displayBookings = bookings.map((book, index) => {
+    return <SingleBooking key={book.id} book={book} />
   })
  
   return (
-    <div>
-      {displaybookings}
+    <div className="mt-24 ml-10 text-2xl h-96 p-3 flex">
+      {displayBookings}
     </div>
   )
 };
