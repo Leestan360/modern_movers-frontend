@@ -26,7 +26,7 @@ function SingleBooking({ book, onDeleteBooking, onUpdateBooking }) {
       {isEditing ? (
         <EditBooking id={id} body={body} onUpdateBooking={handleBooking} />
       ) : (
-        <p className="">{body}</p>
+        <p className="text-white">{body}</p>
       )}
       {
         <div className="flex justify-between mr-2 mb-0">
