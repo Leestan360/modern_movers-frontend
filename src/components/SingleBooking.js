@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import EditBooking from "./EditBooking";
 
-function SingleBooking({ book, onDeleteBooking }) {
+function SingleBooking({ book, onDeleteBooking, onUpdateBooking }) {
+  const [isEditing, setIsEditing] = useState(false);
 
-  const id = book.id;
+  const { id, body } = book;
 
   function handleDelete() {
     fetch(`http://localhost:9292/bookings/${id}`, {
@@ -10,29 +12,39 @@ function SingleBooking({ book, onDeleteBooking }) {
       headers: {
         "Content-type": "application/json",
       },
-    })
-    onDeleteBooking(id)
+    });
+    onDeleteBooking(id);
   }
 
-  function handleEdit() {
-    fetch(`http://localhost:9292/bookings/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify({ body: book.body }),
-      headers: {
-        "Content-type": "application/json",
-      },
-    })
-    .then(res => res.json())
-    .then(data => console.log(data))
+  function handleBooking(updatedBooking) {
+    setIsEditing(false);
+    onUpdateBooking(updatedBooking);
   }
 
   return (
-    <div className="border-2 rounded-lg border-emerald-300 w-96 h-28 pt-4 pl-4 ml-6">
-      <p>{book.body}</p>
-      <div className="mt-4 flex justify-between mr-4">
-        <button className="bg-orange-500 px-3 rounded-lg" onClick={handleEdit}>Edit</button>
-        <button className="bg-orange-500 px-1 rounded-lg" onClick={handleDelete}>Delete</button>
-      </div>
+    <div className="border-2 rounded-lg border-emerald-300 w-96 h-24 pt-2 pl-2 ml-6 overflow-hidden">
+      {isEditing ? (
+        <EditBooking id={id} body={body} onUpdateBooking={handleBooking} />
+      ) : (
+        <p className="">{body}</p>
+      )}
+      {
+        <div className="flex justify-between mr-2 mb-0">
+          <button
+            className="bg-orange-500 px-3 rounded-lg"
+            onClick={() => setIsEditing((isEditing) => !isEditing)}
+          >
+            Edit
+          </button>
+          <button
+            className="bg-orange-500 px-1 rounded-lg"
+            onClick={handleDelete}
+          >
+            Delete
+          </button>
+        </div>
+      }
+      {/* </div> */}
     </div>
   );
 }

@@ -39,18 +39,16 @@ function Login() {
       if (user.email === email && user.password === password) {
         alert(`Welcome ${user.first_name} ${user.last_name}`);
         navigate("/");
-      } else {
-        alert("Incorrect email or password!");
-      }
+      } 
       return user;
     });
   }
 
   // login form
   return (
-    <div>
+    <div className="pt-28">
       <form
-        className="border-solid mt-32 mx-auto p-4 h-50 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center"
+        className="border-solid  mx-auto p-4 h-50 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center"
         type="submit"
         onSubmit={handleSubmit}
       >

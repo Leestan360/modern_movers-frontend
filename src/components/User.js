@@ -59,10 +59,10 @@ function User() {
   }
 
   return (
-    <div>
+    <div className="pt-24">
       {/* Login form */}
       <form
-        className="border-solid mt-20 mx-auto p-4 h-80 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center"
+        className="border-solid mx-auto p-4 h-80 w-80 border-2 rounded-lg border-gray-300 bg-gray-300 text-center"
         onSubmit={handleSubmit}
       >
         <h2 className="text-2xl mx-auto text-center">Create Account</h2>
