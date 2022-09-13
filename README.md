@@ -14,7 +14,8 @@ Signs up a user and redirects to login page for logging in to site
 ## Contributors
 This project is owned by Stanley Mayore, a Software Engineer and a student at Moringa School.
 ### Contact Info
-You can contact me through if you have any issues or contacts:-
+You can contact me through if you have any issues. 
+Contacts:-
    #### Email:- stanleymayore2@gmail.com
    #### Phone No.:- +254702425434
    #### [Linkedin]("www.linkedin.com/in/stanley-mayore")
@@ -42,7 +43,7 @@ For the page structures
 For styling the pages
 
 #### Heroku
-For hosting the database
+For hosting the Ruby sinatra API
 
 ## License 
 This project is a MIT licensed project
