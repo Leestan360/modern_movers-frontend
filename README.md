@@ -1,5 +1,5 @@
 # Modern movers
-## This is a project about an event and wedding site.
+## This is a project about a mover website company.
 
 ### Home Page
 Displays a welcoming message
