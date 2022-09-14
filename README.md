@@ -22,7 +22,7 @@ Contacts:-
 
 
 ## Backend Url
-#### [Backend Url]("https://github.com/Leestan360/modern_movers-backend.git")
+#### [Backend](https://github.com/Leestan360/modern_movers-backend.git)
 
 ## Description
 This is a one page project. It has the home page, bookings page, login page and signup pages. 
