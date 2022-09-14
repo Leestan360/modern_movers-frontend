@@ -7,7 +7,7 @@ function SingleBooking({ book, onDeleteBooking, onUpdateBooking }) {
   const { id, body } = book;
 
   function handleDelete() {
-    fetch(`http://localhost:9292/bookings/${id}`, {
+    fetch(`https://modern-movers-backend.herokuapp.com/bookings/${id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",

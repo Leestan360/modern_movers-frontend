@@ -13,7 +13,7 @@ function Login() {
 
   // Fetch all users from db
   useEffect(() => {
-    fetch("http://localhost:9292/users")
+    fetch("https://modern-movers-backend.herokuapp.com/users")
       .then((res) => res.json())
       .then((data) => {
         setUserData(data);

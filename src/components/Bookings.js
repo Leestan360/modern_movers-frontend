@@ -5,7 +5,7 @@ function Bookings() {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:9292/bookings")
+    fetch("https://modern-movers-backend.herokuapp.com/bookings")
       .then((res) => res.json())
       .then((data) => setBookings(data));
   }, []);

@@ -12,7 +12,7 @@ function Book({ onAddBooking }) {
     if (body === "") {
       return false;
     } else {
-      fetch("http://localhost:9292/bookings", {
+      fetch("https://modern-movers-backend.herokuapp.com/bookings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ body: body }),

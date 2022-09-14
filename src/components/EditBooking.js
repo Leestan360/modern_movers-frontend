@@ -10,7 +10,7 @@ function EditBooking(book, onUpdateBooking) {
   function handleUpdateBooking(e) {
     e.preventDefault();
 
-    fetch(`http://localhost:9292/bookings/${book.id}`, {
+    fetch(`https://modern-movers-backend.herokuapp.com/bookings/${book.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
